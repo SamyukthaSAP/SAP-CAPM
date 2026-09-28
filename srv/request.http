@@ -1,0 +1,263 @@
+http://localhost:4004/odata/v4/catlog/EmployeeSrv
+
+###
+POST http://localhost:4004/odata/v4/catlog/createEmployee
+Content-Type: application/json
+
+{
+    "ID": "2a5776ec-e711-4c11-a92a-2da5b46c40b2",
+    "accountNumber":null,
+    "bankId": null,
+    "bankName":null,
+    "email":null,
+    "gender":"M",
+    "language":"E",
+    "loginName":"RAMAM",
+    "nameFirst":" Sita Ram",
+    "nameInitials":null,
+    "nameLast":"Murthy",
+    "nameMiddle":null,
+    "phoneNumber":"(+1) 9898989898",
+    "salaryAmount": "45000.00"
+}
+
+###
+POST http://localhost:4004/odata/v4/catlog/createAddress
+Content-Type: application/json
+
+{
+    "NODE_KEY": "100002",
+    "ADDRESS_TYPE": "myaddrestype",
+    "VAL_START": "2001-01-01",
+    "VAL_END": "2002-02-02",
+    "LATITUDE": "101.101",
+    "LONGITUDE": "102.102"
+}
+
+###
+POST http://localhost:4004/odata/v4/catlog/updateEmployee
+Content-Type: application/json
+
+{
+    "ID": "2a5776ec-e711-4c11-a92a-2da5b46c40b2",
+    "salaryAmount": "100000.00",
+    "Currency_code":"USD"
+}
+
+###
+POST http://localhost:4004/odata/v4/catlog/updateAddress
+Content-Type: application/json
+
+{
+    "NODE_KEY":"100002",
+    "STREET": "Nallurihali"
+}
+
+###
+POST http://localhost:4004/odata/v4/catlog/createProduct
+Content-Type: application/json
+
+{
+    "NODE_KEY": "1000c",
+    "PRODUCT_ID": "1001",
+    "TYPE_CODE": "HD",
+    "CATEGORY": "Home Decor",
+    "DESCRIPTION": "This is a Home Decor Item",
+    "TAX_TARIF_CODE": "102",
+    "MEASURE_UNIT":"KG",
+    "WEIGHT_MEASURE": "5.5",
+    "WEIGHT_UNIT":"KG",
+    "PRICE":"7000",
+    "CURRENCY_CODE": "USD",
+    "WIDTH": "35",
+    "DEPTH": "25",
+    "HEIGHT": "15",
+    "DIM_UNIT": "cm"
+}
+
+###
+POST http://localhost:4004/odata/v4/catlog/updateProduct
+Content-Type: application/json
+
+{
+    "NODE_KEY":"1000b",
+    "PRICE": 10000
+}
+
+###
+POST  http://localhost:4004/odata/v4/catlog/deleteEmployee
+Content-Type: application/json
+
+{
+    "ID":"02BD2137-0890-1EEA-A6C2-BB55C19787FB"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catlog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C197A7FB
+Content-Type: application/json
+
+{
+    "salaryAmount":"1005000",
+    "Currency_code":"USD"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catlog/ProductSrv/74867AD200E41EDBA5D8B06B26EB4052
+Content-Type: application/json
+
+{
+    "PRICE":"1005000",
+    "CURRENCY_CODE":"USD"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catlog/AddressSrv/NODE1005
+Content-Type: application/json
+
+{
+    "COUNTRY": "IN"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catlog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C197C7FB
+Content-Type: application/json
+
+{
+    "phoneNumber":"+91 12345678910"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catlog/BusinessPartnerSrv/74867AD200E41EDBA5D8B06885A5A052
+Content-Type: application/json
+
+{
+    "COMPANY_NAME":"DelBont , Industries"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catlog/PurchaseitemsSrv/74867AD200E41EDBA5D8B06B26EB4052
+Content-Type: application/json
+
+{
+    "PO_ITEMS_POS":"11"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catlog/PurchaseitemsSrv/74867AD200E41EDBA5D8B0CBD35B4052
+Content-Type: application/json
+
+{
+    "GROSS_AMOUNT":"16000",
+    "CURRENCY_code":"USD"
+}
+
+
+//custom function
+###
+GET http://localhost:4004/odata/v4/catlog/getHighestSalariedEmployees()
+###
+GET http://localhost:4004/odata/v4/catlog/getPrice
+
+###
+POST http://localhost:4004/odata/v4/catlog/EmployeeSrv
+Content-Type: application/json
+
+{
+    "ID": "2a5776ec-e711-4c11-a92a-2da5b46c40b6",
+    "accountNumber":null,
+    "bankId": null,
+    "bankName":null,
+    "email":null,
+    "gender":"M",
+    "language":"E",
+    "loginName":"RAMAM",
+    "nameFirst":" Sita Ram",
+    "nameInitials":null,
+    "nameLast":"Murthy",
+    "nameMiddle":null,
+    "phoneNumber":"(+1) 9898989898",
+    "salaryAmount": "45000.00"
+}
+
+###
+GET http://localhost:4004/odata/v4/catlog/EmployeeSrv
+
+###
+POST http://localhost:4004/odata/v4/catlog/ProductSrv/74867AD200E41EDBA5D8B06B26ECA052/increasePrice
+
+###
+GET  http://localhost:4004/odata/v4/catlog/ProductSrv/74867AD200E41EDBA5D8B06B26ECA052/getHighestPricedProducts
+
+###
+POST http://localhost:4004/odata/v4/catlog/EmployeeSrv/2a5776ec-e711-4c11-a92a-2da5b46c40b2/increaseSalary
+Content-Type: application/json
+
+{}
+
+###
+GET http://localhost:4004/odata/v4/catlog/EmployeeSrv/2a5776ec-e711-4c11-a92a-2da5b46c40b2
+
+###
+GET http://localhost:4004/odata/v4/catlog/EmployeeSrv/2a5776ec-e711-4c11-a92a-2da5b46c40b2/getHighestSalariedEmployees
+
+###
+GET http://localhost:4004/odata/v4/catlog/utilities
+
+
+
+//OData Query Options
+###
+GET http://localhost:4004/odata/v4/catlog/BusinessPartnerSrv/$count
+
+###
+GET http://localhost:4004/odata/v4/catlog/AddressSrv?$top=5
+
+###
+GET http://localhost:4004/odata/v4/catlog/ProductSrv?$top=2&$skip=10
+
+###
+GET http://localhost:4004/odata/v4/catlog/EmployeeSrv?$filter=Currency_code eq 'EUR'
+
+###
+GET http://localhost:4004/odata/v4/catlog/PurchaseoderSrv?$top=10&$select=CURRENCY_code,GROSS_AMOUNT,TAX_AMOUNT
+
+###
+GET http://localhost:4004/odata/v4/catlog/PurchaseitemsSrv?$orderby=NET_AMOUNT asc
+
+###
+GET http://localhost:4004/odata/v4/catlog/BusinessPartnerSrv('74867AD200E41EDBA5D8B06885A74052')/COMPANY_NAME/$value
+
+###
+GET http://localhost:4004/odata/v4/catlog/BusinessPartnerSrv?$expand=AD
+
+//15 question Assignment
+###
+GET https://services.odata.org/V4/Northwind/Northwind.svc/Products/$count/?$filter=Discontinued eq true
+
+###
+GET  https://services.odata.org/V4/Northwind/Northwind.svc/Categories/?$filter=startswith(CategoryName,'Co') & $select=CategoryName,Description
+
+###
+GET  https://services.odata.org/V4/Northwind/Northwind.svc/Suppliers?$filter=contains(Address,'rue')&$select=CompanyName,City,PostalCode,Country & $orderby=CompanyName asc
+
+###
+GET https://services.odata.org/V4/Northwind/Northwind.svc/Order_Details?$apply=groupby((ProductID),aggregate(Quantity with sum as TotalQuantities)) & $select=ProductID,TotalQuantities
+
+###
+GET https://services.odata.org/V4/Northwind/Northwind.svc/Orders?$filter=Shipper/CompanyName eq 'Speedy Express' & $expand=Customer($select=Address,ContactName)
+
+###
+GET https://services.odata.org/V4/Northwind/Northwind.svc/Suppliers?$filter=CompanyName ne null and ContactName ne null and ContactTitle ne null and Region ne null
+
+###
+GET https://services.odata.org/V4/Northwind/Northwind.svc/Products?$filter=Category/CategoryName eq 'Condiments' & $select=ProductName 
+
+###
+GET https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$filter=not Orders/any()
+
+###
+GET https://services.odata.org/V4/Northwind/Northwind.svc/Orders?$filter=CustomerID eq 'FISSA'
+
+###
+GET https://services.odata.org/V4/Northwind/Northwind.svc/Employees/?$compute=concat(concat(LastName,%27,%27),FirstName)%20as%20DisplayName%20&%20$select=DisplayName
+
