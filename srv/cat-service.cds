@@ -97,6 +97,7 @@ service CatlogService {
         ID: UUID
     ) returns String;
 
+    // --- Added comment
     //custom Function Declaration
     function getHighestSalariedEmployees() returns array of EmployeeSrv;
 
